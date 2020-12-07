@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LivrosComponent implements OnInit {
 
+  titulo = 'Livros';
+
+  public livros = [
+    {nome: "Meditações"},
+    {nome: "A arte de Viver"},
+    {nome: "Sobre a Ira"},
+  ];
+
   constructor() { }
 
   ngOnInit() {

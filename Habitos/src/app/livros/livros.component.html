@@ -1,3 +1,6 @@
-<p>
-  livros works!
-</p>
+<h1>{{titulo}}</h1>
+<ul>
+    <li *ngFor="let livro of livros">
+        {{livro.nome}}
+    </li>
+</ul>

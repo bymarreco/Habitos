@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JogosComponent implements OnInit {
 
+  titulo = 'Jogos';
+
+  public jogos = [
+    {nome: "Assassins Creed"},
+    {nome: "Dark Souls"},
+    {nome: "Gears 5"},
+  ];
+
   constructor() { }
 
   ngOnInit() {
