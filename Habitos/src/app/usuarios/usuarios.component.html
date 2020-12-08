@@ -1,6 +1,18 @@
-<h1>{{titulo}}</h1>
-<ul>
-    <li *ngFor="let usuario of usuarios">
-        {{usuario.nome}}
-    </li>
-</ul>
+<app-titulo [titulo]="titulo"></app-titulo>
+  
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of usuarios">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.nome}}</td>
+        <td>{{user.sobrenome}}</td>
+      </tr>
+    </tbody>
+  </table>

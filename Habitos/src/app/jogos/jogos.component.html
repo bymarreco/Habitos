@@ -1,6 +1,22 @@
-<h1>{{titulo}}</h1>
-<ul>
-    <li *ngFor="let jogo of jogos">
-        {{jogo.nome}}
-    </li>
-</ul>
+<app-titulo [titulo]="titulo"></app-titulo>
+
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Nota</th>
+        <th scope="col">Tempo</th>
+        <th scope="col">Plataforma</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let jogo of jogos">
+        <th scope="row">{{jogo.id}}</th>
+        <td>{{jogo.nome}}</td>
+        <td>{{jogo.nota}}</td>
+        <td>{{jogo.tempo}}</td>
+        <td>{{jogo.plataforma}}</td>
+      </tr>
+    </tbody>
+  </table>

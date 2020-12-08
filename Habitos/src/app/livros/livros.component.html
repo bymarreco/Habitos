@@ -1,6 +1,24 @@
-<h1>{{titulo}}</h1>
-<ul>
-    <li *ngFor="let livro of livros">
-        {{livro.nome}}
-    </li>
-</ul>
+<app-titulo [titulo]="titulo"></app-titulo>
+
+<table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Nota</th>
+        <th scope="col">Páginas</th>
+        <th scope="col">Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let livro of livros">
+        <th scope="row">{{livro.id}}</th>
+        <td>{{livro.nome}}</td>
+        <td>{{livro.autor}}</td>
+        <td>{{livro.nota}}</td>
+        <td>{{livro.paginas}}</td>
+        <td>{{livro.categoria}}</td>
+      </tr>
+    </tbody>
+  </table>

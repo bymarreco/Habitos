@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosComponent implements OnInit {
 
-  titulo = 'Usuarios';
+  public titulo = 'Usuarios';
 
   public usuarios = [
-    {nome: "Lucas"},
-    {nome: "Daniel"},
-    {nome: "Chaves"},
+    {id:1 ,nome: "Lucas", sobrenome: 'Rech'},
+    {id:2 ,nome: "Daniel", sobrenome: 'teste'},
+    {id:3 ,nome: "Chaves", sobrenome: 'mario'},
   ];
 
   constructor() { }
