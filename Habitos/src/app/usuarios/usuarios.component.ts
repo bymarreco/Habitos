@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class UsuariosComponent implements OnInit {
 
   public titulo = 'Usuarios';
+  public usuarioSelecionado: string;
 
   public usuarios = [
     {id:1 ,nome: "Lucas", sobrenome: 'Rech'},
@@ -20,4 +21,11 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  usuarioSelect(usuario: any){
+    this.usuarioSelecionado = usuario.nome;
+  }
+
+  voltar(){
+    this.usuarioSelecionado = '';
+  }
 }

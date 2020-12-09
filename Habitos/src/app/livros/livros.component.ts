@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LivrosComponent implements OnInit {
 
-  titulo = 'Livros';
+  public titulo = 'Livros';
+  public livroSelecionado: string;
 
   public livros = [
     {id: 1 ,nome: "Meditações", autor: 'Marco Aurélio', nota:10 , paginas: 132 , categoria:'Filosofia'},
@@ -20,4 +21,11 @@ export class LivrosComponent implements OnInit {
   ngOnInit() {
   }
 
+  livroSelect(livro: any){
+    this.livroSelecionado = livro.nome;
+  }
+
+  voltar(){
+    this.livroSelecionado = '';
+  }
 }

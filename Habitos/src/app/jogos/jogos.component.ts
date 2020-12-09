@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class JogosComponent implements OnInit {
 
   titulo = 'Jogos';
+  public jogoSelecionado: string;
 
   public jogos = [
     {id: 1 ,nome: "Assassins Creed", nota:10 , tempo:32 , plataforma:"PC" },
@@ -18,6 +19,14 @@ export class JogosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  jogoSelect(jogo: any){
+    this.jogoSelecionado = jogo.nome;
+  }
+
+  voltar(){
+    this.jogoSelecionado = '';
   }
 
 }
